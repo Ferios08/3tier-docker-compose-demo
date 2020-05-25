@@ -5,7 +5,7 @@ WORKDIR /app
 RUN git clone https://github.com/Ferios08/Angular-RestAPI-Demo.git /app
 RUN rm Dockerfile
 RUN npm install
-RUN npm build
+RUN npm run build
 ################################
 # stage 2
 FROM nginx
