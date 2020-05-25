@@ -4,8 +4,8 @@ services:
 
 
   database:
-    image: mongo:4.1.8-xenial
-    container_name: db
+    image: mongo:3.6.9
+    container_name: database
     restart: unless-stopped
     env_file: .env
     environment:
