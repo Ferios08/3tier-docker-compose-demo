@@ -1,6 +1,5 @@
 FROM node:lts as node
-RUN apk update && apk upgrade && \
-    apk add --no-cache bash git
+RUN apt-get update && apt-get install -y git
 WORKDIR /app
 RUN git clone https://github.com/Ferios08/NodeJS-Demo.git /app
 RUN rm Dockerfile
