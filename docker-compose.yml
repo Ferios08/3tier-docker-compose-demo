@@ -30,8 +30,9 @@ services:
       - MONGO_URL=$MONGO_URL
       - MONGO_PORT=$MONGO_PORT
       - MONGO_DB=$MONGO_DB
+      - PORT=$PORT
     ports:
-      - "3000:3000"
+      - $PORT:$PORT
     volumes:
       - .:/home/node/app
       - node_modules:/home/node/app/node_modules
@@ -46,7 +47,7 @@ services:
     container_name: frontend
     restart: unless-stopped
     env_file: .env
-    environment:
+    #environment:
     ports:
       - "80:80"
     volumes:
