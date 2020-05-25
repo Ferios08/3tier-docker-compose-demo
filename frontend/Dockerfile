@@ -4,7 +4,7 @@ WORKDIR /app
 RUN git clone https://github.com/Ferios08/NodeJS-Demo.git /app
 RUN rm Dockerfile
 RUN npm install
-RUN npm run build
+RUN npm  build
 ################################
 # stage 2
 FROM nginx
