@@ -15,6 +15,7 @@ services:
       - dbdata:/data/db
     networks:
       - app-network  
+    command: ./scripts/wait-for.sh database:27017 -- /home/node/app/node_modules/.bin/nodemon app.js 
 ################################
   backend:
     build:
