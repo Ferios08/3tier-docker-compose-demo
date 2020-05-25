@@ -1,7 +1,7 @@
 FROM node:lts   
 RUN apt-get update && apt-get install -y git
 WORKDIR /home/node/app
-RUN git clone https://github.com/Ferios08/Angular-RestAPI-Demo.git /home/node/app
+RUN git clone https://github.com/Ferios08/NodeJS-Demo.git /home/node/app
 
 RUN npm install
 
