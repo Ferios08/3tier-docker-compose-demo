@@ -1,7 +1,7 @@
 FROM node:lts   
 RUN apt-get update && apt-get install -y git
-WORKDIR /home/node/app
-RUN git clone https://github.com/Ferios08/NodeJS-Demo.git /home/node/app
+WORKDIR /app
+RUN git clone https://github.com/Ferios08/NodeJS-Demo.git /app
 
 RUN npm install
 
