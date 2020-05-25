@@ -41,7 +41,7 @@ services:
 
   frontend:
     build:
-      context: ./front
+      context: ./frontend
       dockerfile: Dockerfile
     image: frontend
     container_name: frontend
