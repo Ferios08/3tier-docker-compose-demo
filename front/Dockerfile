@@ -1,14 +1,15 @@
-FROM node:lts   
-
+FROM node:lts as node
 RUN apk update && apk upgrade && \
     apk add --no-cache bash git
-WORKDIR /home/node/app
-RUN git clone https://github.com/Ferios08/Angular-RestAPI-Demo.git /home/node/app
-
-
-USER node
-
-
-COPY --chown=node:node . .
-
-CMD [ "ls" ]
+WORKDIR /app
+RUN git clone https://github.com/Ferios08/NodeJS-Demo.git /app
+RUN rm Dockerfile
+RUN npm install
+RUN npm run build
+################################
+# stage 2
+FROM nginx
+# client is the app name
+COPY --from=node /app/dist/client /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
