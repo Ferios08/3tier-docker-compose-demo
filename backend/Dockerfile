@@ -7,7 +7,7 @@ RUN npm install
 RUN chmod +x /app/scripts/wait-for.sh
 
 ENV PORT=3000
-ENV MONGO_URL="database"
+ENV MONGO_URL=database
 ENV MONGO_USER="ferios"
 ENV MONGO_PASS="admin"
 ENV MONGO_DB="users"
