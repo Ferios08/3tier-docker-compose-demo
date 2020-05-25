@@ -5,10 +5,10 @@ RUN git clone https://github.com/Ferios08/NodeJS-Demo.git /app
 
 RUN npm install
 
-ENV PORT=
-ENV MONGO_URL=
-ENV MONGO_USER=
-ENV MONGO_PASS=
-ENV MONGO_DB=
+ENV PORT=3000
+ENV MONGO_URL="database"
+ENV MONGO_USER="ferios"
+ENV MONGO_PASS="admin"
+ENV MONGO_DB="users"
 EXPOSE $PORT
 CMD [ "node", "index.js" ]
